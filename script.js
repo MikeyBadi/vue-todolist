@@ -6,16 +6,16 @@ const app = new Vue({
     todos:[
       {
         title:'Dare da mangiare al cane',
-        done:'false'
+        done:false
       },
       {
         title:'Fare la spesa',
-        done:'false'
+        done:false
         
       },
       {       
         title:'Preparare da mangiare',
-        done:'false'
+        done:false
       }
     ],
     newTodo:{
