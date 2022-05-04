@@ -24,7 +24,8 @@
       <h1>TO DO LIST</h1>
       <div class="container d-flex justify-content-center mb-input">
         <input 
-        v-model="newTodo"
+        v-model.trim="newTodo"
+        @keyup.enter="addTodo"
         type="text" name="ToDo" id="todo" placeholder="Inserisci le tue cose da fare">
         <button
         @click="addTodo"
