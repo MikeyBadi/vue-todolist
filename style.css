@@ -1,0 +1,42 @@
+
+body{
+  background-color: rgb(211, 221, 221) !important;
+}
+
+.mb-mainCont h1{
+  text-align: center;
+}
+
+.mb-input{
+  margin-top: 50px;
+}
+.mb-input button, .mb-input input{
+  border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #E3E3E3;
+}
+.mb-input input{
+  margin-right: 10px;
+}
+
+.mb-tdList{
+  background-color: rgb(151, 208, 189);
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.mb-tdList ul{
+  padding: 30px;
+}
+
+.mb-tdList li{
+  display: flex;
+  justify-content: space-between;
+}
+.mb-tdList li i{
+  padding-top: 5px;
+  cursor: pointer;
+}
+.mb-tdList li span{
+  cursor: pointer;
+}
