@@ -24,7 +24,7 @@
       <h1>TO DO LIST</h1>
       <div class="container d-flex justify-content-center mb-input">
         <input 
-        v-model.trim="newTodo"
+        v-model.trim="newTodo.title"
         @keyup.enter="addTodo"
         type="text" name="ToDo" id="todo" placeholder="Inserisci le tue cose da fare">
         <button
@@ -38,7 +38,7 @@
         >
           <li
           v-for="(todo, index) in todos">
-            <span>{{todo}}</span>
+            <span @click="todo.done = !todo.done" :class="{'check' : todo.done == true}">{{todo.title}}</span>
             <i 
             @click="removeTodo(index)"
             class="fa-solid fa-xmark"></i>

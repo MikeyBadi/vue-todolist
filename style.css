@@ -47,3 +47,7 @@ body{
 .mb-empty{
   padding: 30px;
 }
+
+.check{
+  text-decoration: line-through;
+}

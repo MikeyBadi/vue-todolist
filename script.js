@@ -4,18 +4,34 @@ const app = new Vue({
   el: "#app",
   data:{
     todos:[
-      'Dare da mangiare al cane',
-      'Fare la spesa',
-      'Preparare da mangiare'
+      {
+        title:'Dare da mangiare al cane',
+        done:'false'
+      },
+      {
+        title:'Fare la spesa',
+        done:'false'
+        
+      },
+      {       
+        title:'Preparare da mangiare',
+        done:'false'
+      }
     ],
-    newTodo:'',
+    newTodo:{
+      title: '',
+      done: false
+    },
   },
   methods: {
     addTodo(){
-      if(this.newTodo.length > 1){
-        this.todos.push(this.newTodo)
-        console.log(this.newTodo);
-        this.newTodo='';
+      if(this.newTodo.title.length > 1){
+        const nextTodo = {
+          title : this.newTodo.title,
+          done : this.newTodo.done
+        }
+        this.todos.push(nextTodo)
+        this.newTodo.title='';
         console.log(this.todos);
       };
     },
