@@ -23,16 +23,30 @@
     <div class="container-fluid mb-mainCont">
       <h1>TO DO LIST</h1>
       <div class="container d-flex justify-content-center mb-input">
-        <input type="text" name="ToDo" id="todo">
-        <button>Inserisci</button>
+        <input 
+        v-model="newTodo"
+        type="text" name="ToDo" id="todo" placeholder="Inserisci le tue cose da fare">
+        <button
+        @click="addTodo"
+        >Inserisci</button>
       </div>
       
       <div class="container mb-tdList">
-        <ul>
-          <li>
-            <span>ciao</span>
-            <i class="fa-solid fa-xmark"></i></li>
+        <ul
+        v-if="todos.length > 0"
+        >
+          <li
+          v-for="(todo, index) in todos">
+            <span>{{todo}}</span>
+            <i 
+            @click="removeTodo(index)"
+            class="fa-solid fa-xmark"></i>
+          </li>
         </ul>
+        <h1
+        v-else=""
+        class="mb-empty"
+        >Annota le tue cose da fare!</h1>
       </div>
     </div>
   </div>

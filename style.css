@@ -32,11 +32,18 @@ body{
 .mb-tdList li{
   display: flex;
   justify-content: space-between;
+  margin: 20px 0;
+  font-size: 18px;
 }
+
 .mb-tdList li i{
   padding-top: 5px;
   cursor: pointer;
 }
 .mb-tdList li span{
   cursor: pointer;
+}
+
+.mb-empty{
+  padding: 30px;
 }
